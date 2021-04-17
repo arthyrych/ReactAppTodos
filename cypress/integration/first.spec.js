@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
-describe('simple test', () => {
-  it('test', () => {
-    expect(true).to.equal(true)
-  })
+describe('simpe test', () => {
+    it('works', () => {
+      expect(true).to.equal(true)
+    })
 })
