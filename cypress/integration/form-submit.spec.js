@@ -1,6 +1,7 @@
-describe('form submission test suite', () => {
-    it('add a new todo item', () => {
-        const newTodo = 'new todo example'
+describe('form submission test suite', ()=> {
+
+    it('add a new todo item', ()=> {
+        const newTodo = 'new todo from const'
         cy.server()
         cy.route('POST', '/api/todos', 'fixture:newTodo').as('save')
         cy.seedAndVisit()
@@ -9,8 +10,8 @@ describe('form submission test suite', () => {
         cy.contains('new todo from fixtures').should('be.visible')
     })
 
-    it('shows an error message for a failed form submission', () => {
-        const newTodo = 'new todo from test const'
+    it('shows an error message for a failed form submission', ()=> {
+        const newTodo = 'new todo from const'
         cy.server()
         cy.route({
             method: 'POST',
@@ -24,4 +25,5 @@ describe('form submission test suite', () => {
         cy.get('.todo-list li').should('have.length', 4)
         cy.get('.error').should('be.visible')
     })
+
 })

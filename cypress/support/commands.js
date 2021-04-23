@@ -24,9 +24,13 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+
+// getting stubbed response with todos and visit homepage
 Cypress.Commands.add('seedAndVisit', (seedData) => {
+
     cy.server()
     cy.route('GET', '/api/todos', seedData || 'fixture:todos').as('todos')
     cy.visit('/')
     cy.wait('@todos')
+
 })

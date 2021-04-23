@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "stubbed task 1",
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "name": "stubbed task 2",
+      "isComplete": true
+    },
+    {
+      "id": 3,
+      "name": "stubbed task 3",
+      "isComplete": true
+    },
+    {
+      "id": 4,
+      "name": "stubbed task 4",
+      "isComplete": false
+    }
+
+  ]
