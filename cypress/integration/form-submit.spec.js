@@ -7,7 +7,7 @@ describe('form submission test suite', ()=> {
         cy.seedAndVisit()
         cy.get('.new-todo').type(newTodo).type('{enter}')
         cy.wait('@save')
-        cy.contains('new todo from fixtures').should('be.visible')
+        cy.contains('new todo from fixture').should('be.visible')
     })
 
     it('shows an error message for a failed form submission', ()=> {
